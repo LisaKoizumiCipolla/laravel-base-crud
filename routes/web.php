@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Guest\Homecontroller as GuestHomeController;
+use App\Http\Controllers\Guest\LidoController as GuestLidoController;
+use App\Http\Controllers\Admin\LidoController as AdminLidoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +18,5 @@ use App\Http\Controllers\Guest\Homecontroller as GuestHomeController;
 */
 
 Route::get('/', [GuestHomeController::class, 'home'])->name('homepage');
+Route::resource('guest/lidi', GuestLidoController::class);
+Route::resource('admin/lidi', AdminLidoController::class);
