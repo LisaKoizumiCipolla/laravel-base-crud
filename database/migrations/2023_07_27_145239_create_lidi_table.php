@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('lidi', function (Blueprint $table) {
             $table->id();
-            $table->string("lidi", 100);
+            $table->string("nome", 100);
             $table->string("località", 100);
-            $table->integer("numero_ombrelloni");
-            $table->integer("numero_lettini");
-            $table->float("prezzo_ombrellone_giorno");
+            $table->smallInteger("numero_ombrelloni");
+            $table->smallInteger("numero_lettini");
+            $table->float("prezzo_ombrellone_giorno", 4, 2);
             $table->date("data_apertura");
             $table->date("data_chiusura");
             $table->boolean("campo_beach_volley");

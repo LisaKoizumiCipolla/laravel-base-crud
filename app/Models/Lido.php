@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Lido extends Model
 {
     use HasFactory;
+
+    
+    protected $table = "lidi";
 }
