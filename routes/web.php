@@ -26,3 +26,4 @@ Route::get('guest/lidi/{id}', [GuestLidoController::class, 'show'])->name('guest
 Route::prefix('admin')->group(function () {
     Route::resource('lidi', AdminLidoController::class);
 });
+//trial simona_dev
