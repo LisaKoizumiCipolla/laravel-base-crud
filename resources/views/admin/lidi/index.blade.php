@@ -35,14 +35,14 @@
                     <td>{{ $lido->località }}</td>
                     <td>{{ $lido->numero_ombrelloni }}</td>
                     <td>{{ $lido->numero_lettini }}</td>
-                    <td>{{ $lido->prezzo_ombrellone_giorno }}</td>
+                    <td>{{ $lido->prezzo_ombrellone_giorno }}€</td>
                     <td>{{ $lido->data_apertura }}</td>
                     <td>{{ $lido->data_chiusura }}</td>
                     <td>{{ (($lido->campo_beach_volley) ? 'Yes' : 'No') }}</td>
                     <td>{{ (($lido->campo_calcio) ? 'Yes' : 'No') }}</td>
                     <td class="">
-                        <a class="btn btn-xs btn-primary m-2" href="">View</a>
-                        <a class="btn btn-xs btn-success m-2" href="">Edit</a>
+                        <a class="btn btn-xs btn-primary m-2" href="{{ route('lidi.show', ['lidi' => $lido->id]) }}">View</a>
+                        <a class="btn btn-xs btn-success m-2" href="{{ route('lidi.edit', ['lidi' => $lido->id]) }}">Edit</a>
                         <a class="btn btn-xs btn-warning m-2" href="">Delete</a>
                     </td>
                 </tr>

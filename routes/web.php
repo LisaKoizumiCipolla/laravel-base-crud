@@ -18,5 +18,11 @@ use App\Http\Controllers\Admin\LidoController as AdminLidoController;
 */
 
 Route::get('/', [GuestHomeController::class, 'home'])->name('homepage');
-Route::resource('guest/lidi', GuestLidoController::class);
-Route::resource('admin/lidi', AdminLidoController::class);
+
+//Route::resource('guest/lidi', GuestLidoController::class);
+Route::get('guest/lidi', [GuestLidoController::class, 'index' ])->name('guestIndex');
+Route::get('guest/lidi/{id}', [GuestLidoController::class, 'show'])->name('guestShow');
+
+Route::prefix('admin')->group(function () {
+    Route::resource('lidi', AdminLidoController::class);
+});

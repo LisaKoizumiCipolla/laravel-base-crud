@@ -24,6 +24,7 @@
                     <th scope="col">Data Chiusura</th>
                     <th scope="col">Campo Beach Volley</th>
                     <th scope="col">Campo Calcio</th>
+                    <th scope="col">Show Details</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,6 +40,9 @@
                     <td>{{ $lido->data_chiusura }}</td>
                     <td>{{ (($lido->campo_beach_volley) ? 'Yes' : 'No') }}</td>
                     <td>{{ (($lido->campo_calcio) ? 'Yes' : 'No') }}</td>
+                    <td class="">
+                        <a class="btn btn-xs btn-primary m-2" href="{{ route('guestShow', $lido->id) }}">View</a>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
