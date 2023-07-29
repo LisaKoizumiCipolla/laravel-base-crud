@@ -43,7 +43,11 @@
                     <td class="">
                         <a class="btn btn-xs btn-primary m-2" href="{{ route('lidi.show', ['lidi' => $lido->id]) }}">View</a>
                         <a class="btn btn-xs btn-success m-2" href="{{ route('lidi.edit', ['lidi' => $lido->id]) }}">Edit</a>
-                        <a class="btn btn-xs btn-warning m-2" href="">Delete</a>
+                        <form action="{{route('lidi.destroy', $lido->id)}}" class="d-inline" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-xs btn-warning m-2" href="">Delete</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach

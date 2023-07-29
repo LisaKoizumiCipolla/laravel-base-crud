@@ -129,6 +129,8 @@ class LidoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $listLidi = Lido::findOrFail($id);
+        $listLidi->delete();
+        return redirect ()->route('lidi.index')->with('delete', $listLidi->nome);
     }
 }
