@@ -25,5 +25,9 @@ Route::get('guest/lidi/{id}', [GuestLidoController::class, 'show'])->name('guest
 
 Route::prefix('admin')->group(function () {
     Route::resource('lidi', AdminLidoController::class);
+<<<<<<< HEAD
 });
 //trial simona_dev to check out if it is working
+=======
+});
+>>>>>>> start-to-add-delete-section
