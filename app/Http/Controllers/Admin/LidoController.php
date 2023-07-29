@@ -134,3 +134,5 @@ class LidoController extends Controller
         return redirect ()->route('lidi.index')->with('delete', $listLidi->nome);
     }
 }
+
+//add delete section
